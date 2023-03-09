@@ -4,8 +4,6 @@ import {
   Box,
   Text,
   Link,
-  VStack,
-  Code,
   Grid,
   theme,
   Flex,
@@ -18,14 +16,11 @@ import {
   SimpleGrid,
   Divider,
   Icon,
-  Stack,
   Stat,
   StatLabel,
   StatNumber,
   StatHelpText,
-  StatArrow,
   Table,
-  Menu,
   Thead,
   Tbody,
   Tr,
@@ -35,9 +30,7 @@ import {
   Input
 } from "@chakra-ui/react"
 import routes from "./routes"
-import { ColorModeSwitcher } from "./ColorModeSwitcher"
 import { MdAttachMoney, MdInfoOutline, MdNotificationsNone } from 'react-icons/md';
-import { Logo } from "./Logo"
 import Sidebar from "./assets/components/sidebar/Sidebar"
 import { SearchBar } from "./assets/components/searchbar/SearchBar"
 import { FaMoon } from "react-icons/fa";
