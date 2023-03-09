@@ -179,12 +179,13 @@ function App() {
               </Flex> 
 		        </Box>
             <Box mt="20px">
-              <Flex w={{ sm: '100%', md: '644px' }}
+              <Flex w={{ sm: '100%', md: '620px' }}
                 alignItems='center'
-                columnGap="20px"
+                gap="20px"
                 flexDirection='row'
                 bg="white"
-                p='10px'
+                py="10px"
+                px='20px'
                 borderRadius='30px'
               >
                 <Box>
