@@ -44,6 +44,9 @@ import { FaMoon } from "react-icons/fa";
 
 function App() {
 
+  let fontColor = 'white';
+  let fontColorOpacity = 'rgba(255, 255, 255, 0.7)';
+
   const line3 = [
     {
       id: 1,
@@ -176,49 +179,55 @@ function App() {
               </Flex> 
 		        </Box>
             <Box mt="20px">
-            <Flex w={{ sm: '100%', md: 'auto' }}
-                    alignItems='center'
-                    flexDirection='row'
-                    bg="white"
-                    p='10px'
-                    borderRadius='30px'
-                  >
-
-                    <Input
-                      placeholder="Data inicial"
-                      _placeholder={{ color: 'gray.400', fontSize: '14px', alignItems: 'center' }}
-                      bg="#F4F7FE"
-                      color="#8F9BBA"
-                      fontWeight='500'
-                      borderRadius="30px"
-                      size="md"
-                    />
-
-                    <Input
-                      placeholder="Data final"
-                      _placeholder={{ color: 'gray.400', fontSize: '14px', alignItems: 'center' }}
-                      bg="#F4F7FE"
-                      color="#8F9BBA"
-                      fontWeight='500'
-                      borderRadius="30px"
-                      size="md"
-                    />
-                  </Flex>
+              <Flex w={{ sm: '100%', md: '644px' }}
+                alignItems='center'
+                columnGap="20px"
+                flexDirection='row'
+                bg="white"
+                p='10px'
+                borderRadius='30px'
+              >
+                <Box>
+                  <Text color="#707EAE">Filtrar por data</Text>
+                </Box>
+                <Input
+                  placeholder="Data inicial"
+                  border="none"
+                  _placeholder={{ color: 'gray.400', fontSize: '14px', alignItems: 'center' }}
+                  bg="#F4F7FE"
+                  color="#8F9BBA"
+                  fontWeight='500'
+                  w="214px"
+                  borderRadius="30px"
+                  size="md"
+                />
+                <Input
+                  placeholder="Data final"
+                  border="none"
+                  _placeholder={{ color: 'gray.400', fontSize: '14px', alignItems: 'center' }}
+                  bg="#F4F7FE"
+                  color="#8F9BBA"
+                  w="214px"
+                  fontWeight='500'
+                  borderRadius="30px"
+                  size="md"
+                />
+              </Flex>
             </Box>
-            <Box pt={{ base: '150px', md: '80px', xl: '100px' }} w="75%">
-              <Grid gridTemplateColumns="repeat(auto-fit, minmax(350px, 1fr))" gap={5}>
+            <Box pt={{ base: '150px', md: '80px', xl: '100px' }} w="90%">
+              <Grid gridTemplateColumns="repeat(auto-fit, minmax(250px, 1fr))" gap={5}>
                 <Card backgroundColor="#EC7A7A" borderRadius="20px">
                   <CardBody>
                     <Flex alignItems={'center'} justifyContent={'center'} borderRadius={'50%'} backgroundColor="white" w='56px' h='56px'>
                       <Icon w='32px' h='32px' as={MdAttachMoney} color="#EC7A7A" />
                     </Flex>
-                    <Text fontSize={48}>R$312.321,00</Text>
-                    <Text fontSize={24}>Receita total</Text>
+                    <Text fontSize={48} fontWeight={700} color={fontColor}>R$312.321,00</Text>
+                    <Text fontSize={24} color={fontColorOpacity}>Receita total</Text>
                   </CardBody>
-                  <Divider />
+                  <Divider color="#E9EDF7"/>
                   <CardFooter display="flex" flexDirection="column">
-                    <Text fontSize={24}>R$67,20</Text>
-                    <Text fontSize={14}>Média por cliente</Text>
+                    <Text fontSize={24} fontWeight={700} color={fontColor}>R$67,20</Text>
+                    <Text fontSize={14} color={fontColorOpacity}>Média por cliente</Text>
                   </CardFooter>
                 </Card>
                 <Card backgroundColor="#7A85EC" borderRadius="20px">
@@ -226,13 +235,13 @@ function App() {
                     <Flex alignItems={'center'} justifyContent={'center'} borderRadius={'50%'} backgroundColor="white" w='56px' h='56px'>
                       <Icon w='32px' h='32px' as={MdAttachMoney} color="#7A85EC" />
                     </Flex>
-                    <Text fontSize={48}>R$74.421,00</Text>
-                    <Text fontSize={24}>Lucro total</Text>
+                    <Text fontSize={48} fontWeight={700} color={fontColor}>R$74.421,00</Text>
+                    <Text fontSize={24} color={fontColorOpacity}>Lucro total</Text>
                   </CardBody>
-                  <Divider />
+                  <Divider color="#E9EDF7"/>
                   <CardFooter display="flex" flexDirection="column">
-                    <Text fontSize={24}>R$42,30</Text>
-                    <Text fontSize={14}>Média por cliente</Text>
+                    <Text fontSize={24} fontWeight={700} color={fontColor}>R$42,30</Text>
+                    <Text fontSize={14} color={fontColorOpacity}>Média por cliente</Text>
                   </CardFooter>
                 </Card>
                 <Card backgroundColor="#65D4AC" borderRadius="20px">
@@ -240,13 +249,13 @@ function App() {
                     <Flex alignItems={'center'} justifyContent={'center'} borderRadius={'50%'} backgroundColor="white" w='56px' h='56px'>
                       <Icon w='32px' h='32px' as={MdAttachMoney} color="#65D4AC" />
                     </Flex>
-                    <Text fontSize={48}>R$3,12</Text>
-                    <Text fontSize={24}>Lucro por venda</Text>
+                    <Text fontSize={48} fontWeight={700} color={fontColor}>R$3,12</Text>
+                    <Text fontSize={24} color={fontColorOpacity}>Lucro por venda</Text>
                   </CardBody>
-                  <Divider />
+                  <Divider color="#E9EDF7"/>
                   <CardFooter display="flex" flexDirection="column">
-                    <Text fontSize={24}>R$12,40</Text>
-                    <Text fontSize={14}>Média por cliente</Text>
+                    <Text fontSize={24} fontWeight={700} color={fontColor}>R$12,40</Text>
+                    <Text fontSize={14} color={fontColorOpacity}>Média por cliente</Text>
                   </CardFooter>
                 </Card>
               </Grid>
@@ -315,7 +324,7 @@ function App() {
 
             <Box marginTop="20px">
               <SimpleGrid columns={{sm: 1, md: 2, lg: 3}} spacingX="20px" spacingY="20px">
-                <Card flexDirection='column' w='100%' borderRadius="20px" overflowX={{ sm: 'scroll', lg: 'hidden' }} backgroundColor="white">
+                <Card flexDirection='column' w='100%' borderRadius="20px" boxShadow="none" overflowX={{ sm: 'scroll', lg: 'hidden' }} backgroundColor="white">
                   <Flex px='25px' mb="8px" mt="20px" flexDirection="column">
                     <Text color="#2B3674" fontSize='24px' mb="10px" fontWeight='700' lineHeight='100%'>
                       Planos
@@ -358,7 +367,7 @@ function App() {
                     </Table>
                   </Box>
                 </Card>
-                <Card flexDirection='column' w='100%' borderRadius="20px" overflowX={{ sm: 'scroll', lg: 'hidden' }} backgroundColor="white">
+                <Card flexDirection='column' w='100%' borderRadius="20px" boxShadow="none" overflowX={{ sm: 'scroll', lg: 'hidden' }} backgroundColor="white">
                   <Flex px='25px' mb="8px" mt="20px" flexDirection="column">
                     <Text color="#2B3674" fontSize='24px' mb="10px" fontWeight='700' lineHeight='100%'>
                       Categorias
@@ -401,7 +410,7 @@ function App() {
                     </Table>
                   </Box>
                 </Card>
-                <Card flexDirection='column' w='100%' borderRadius="20px" overflowX={{ sm: 'scroll', lg: 'hidden' }} backgroundColor="white">
+                <Card flexDirection='column' w='100%' borderRadius="20px" boxShadow="none" overflowX={{ sm: 'scroll', lg: 'hidden' }} backgroundColor="white">
                   <Flex px='25px' mb="8px" mt="20px" flexDirection="column">
                     <Text color="#2B3674" fontSize='24px' mb="10px" fontWeight='700' lineHeight='100%'>
                       Tipos de planos
